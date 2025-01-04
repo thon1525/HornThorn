@@ -13,6 +13,8 @@ import {
   nodejs,
   mongodb,
   git,
+  // nextjs,
+  // vuejs,
   figma,
   docker,
   meta,
@@ -23,6 +25,11 @@ import {
   jobit,
   tripguide,
   threejs,
+  Sabiacodedesign,
+  Beltie,
+  learnwithkru,
+  barcodesnanner,
+  lsp
 } from "../assets";
 
 export const navLinks = [
@@ -46,7 +53,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
@@ -54,7 +61,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Python Developer",
     icon: creator,
   },
 ];
@@ -80,6 +87,14 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
+  // {
+  //   name: "Next JS",
+  //   icon: nextjs,
+  // },
+  // {
+  //   name: "Vue JS",
+  //   icon: vuejs,
+  // },
   {
     name: "Redux Toolkit",
     icon: redux,
@@ -116,91 +131,98 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Developer & Teamleader at Learwithkru ",
+    company_name: "SabaiCode",
+    icon: Sabiacodedesign,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "nov 2023 - April 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led a team to develop a scalable web app connecting students with tutors.",
+      "Built RESTful APIs with Node.js and Express.js.",
+      "Implemented RabbitMQ and monitoring tools (Prometheus, Grafana) for performance tracking.",
+      "Used Docker and Kubernetes for containerization and deployment.",
+      "Managed MongoDB for efficient data handling.",
+      "Established CI/CD pipelines with GitHub Actions and provisioned infrastructure with Terraform.",
+      "Deployed the app on AWS for scalability and reliability.",
+      "Ensured code quality through reviews, debugging, and testing.",
+      "Created comprehensive documentation for APIs and system architecture."
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "barcode Inventory System",
+    company_name: "Beltie university",
+    icon: Beltie,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Jan 2023 - Now",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Developing and maintaining web applications using Laravel and other related technologies.",
+      "Developed a barcode inventory system with user roles (Admin, Customer, Employee).",
+      "Built using Laravel (backend) and MySQL (database).",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Integrated barcode scanning for real-time inventory updates.",
+    
     ],
   },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Web Developer",
+  //   company_name: "Shopify",
+  //   icon: shopify,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "To develop the next generation of Cambodian leaders in technology and innovation.",
+    name: "sabai code",
+    designation: "VISION",
+    company: "sabaicode",
+    image: "https://sabaicode.com/sabaicode.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "To empower every Cambodian child with powerful technology skills",
+    name: "sabai code",
+    designation: "MISSION",
+    company: "sabaicode",
+    image: "https://sabaicode.com/sabaicode.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "After Thorn optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "sabai code",
+    designation: "co-founder",
+    company: "sabaicode",
+    image: "https://sabaicode.com/sabaicode.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Learwithkru",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "LearnWithKru and VerifyTutor are platforms connecting students with tutors for personalized learning. LearnWithKru emphasizes diverse subjects, flexible learning options, and transparent pricing, while VerifyTutor focuses on verified tutor credentials, performance tracking, and professional standards. Both aim to ensure trust, quality education, and flexibility for students and tutors.",
     tags: [
       {
         name: "react",
@@ -215,49 +237,48 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: learnwithkru,
+    source_code_link: "https://github.com/Vath-Song99/learnwithkru-monorepo.git/",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    name: "Barcode Inventory System",
+    description: "Designed and developed a barcode-based inventory management system using Laravel and MySQL, featuring efficient product tracking, robust user roles and permissions (Admin, Customer, Employee), a comprehensive product catalog, and real-time barcode scanning for streamlined inventory operations.",
     tags: [
       {
-        name: "react",
+        name: "Laravel",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "mysql",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "bootstrap",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: barcodesnanner,
+    source_code_link: "https://github.com/thon1525/barcode-inventory-system.git",
   },
   {
-    name: "Trip Guide",
+    name: "LSP Hotel",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Develop a web-based hotel management system for LSP Hotel to enhance guest experience and streamline operations. The system will include features for managing room reservations, guest check-ins/check-outs, and staff operations while providing real-time data on hotel activities.",
     tags: [
       {
-        name: "nextjs",
+        name: "wordpress",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mysql",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "php",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: lsp,
     source_code_link: "https://github.com/",
   },
 ];

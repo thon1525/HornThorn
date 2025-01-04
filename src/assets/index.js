@@ -20,18 +20,25 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import nextjs from "./tech/nextjs.png";
+import vuejs from "./tech/vuejs.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import Sabiacodedesign from "./company/Sabiacodedesign.png";
+import Beltie from "./company/beltei_international_university_in_cambodia.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import learnwithkru from "./learnwithkru.png";
+import barcodesnanner from "./barcodesnanner.png";
+import lsp from "./LSP_HOTEL.png";
 export {
   logo,
+  lsp,
   backend,
   creator,
   mobile,
@@ -48,7 +55,10 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  // nextjs,
+  // vuejs,
   redux,
+  Sabiacodedesign,
   tailwind,
   typescript,
   threejs,
@@ -59,4 +69,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  Beltie,
+  learnwithkru,
+  barcodesnanner
 };

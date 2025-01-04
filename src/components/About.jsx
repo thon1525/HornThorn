@@ -42,11 +42,10 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I have been working as a Software Developer proficient in TypeScript, JavaScript, PHP, and Python. I use well-known frameworks such as React, Node.js, Vue, Next.js, Laravel, FastAPI, and Three.js.
+        I have experience working with databases (MySQL, SQL, MongoDB), message brokers (RabbitMQ), and monitoring tools (Grafana). I’m also experienced in CI/CD pipelines with GitHub Actions and Terraform, and containerization tools like Docker and Kubernetes. I can deploy applications on AWS services like S3 and EC2.
+        I’m comfortable working in Ubuntu/Linux environments and skilled at preparing precise API documentation and system architecture diagrams.
+        As a fast learner and team player, my passion lies in building efficient, scalable, and user-friendly software solutions.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
