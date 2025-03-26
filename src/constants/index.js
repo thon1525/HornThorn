@@ -31,7 +31,9 @@ import {
   learnwithkru,
   barcodesnanner,
   lsp,
+  js,
   sheep,
+  frontEnd,
   api,
   windows
 } from "../assets";
@@ -61,12 +63,20 @@ const services = [
     icon: mobile,
   },
   {
+    title: "Frontend Developer",
+    icon: frontEnd,
+  },
+  {
     title: "Backend Developer",
     icon: backend,
   },
   {
     title: "Python Developer",
     icon: creator,
+  },
+  {
+    title: "Javascript Developer",
+    icon: js,
   },
   {
     title: "API Developer",

@@ -34,6 +34,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import sheep from "./sheep.png";
 import api from "./api.png";
+import js from "./js.png";
+import frontEnd from "./front-end.png";
 import windows from "./windows.svg";
 import coffee_windowpos from "./coffee_windowpos.png";
 import tripguide from "./tripguide.png";
@@ -44,6 +46,8 @@ export {
   logo,
   lsp,
   api,
+  js,
+  frontEnd,
   windows,
   backend,
   creator,
