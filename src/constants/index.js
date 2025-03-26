@@ -69,11 +69,11 @@ const services = [
     icon: creator,
   },
   {
-    title: "API",
+    title: "API Developer",
     icon: api,
   },
   {
-    title: "Window pos",
+    title: "Window Developer",
     icon: windows,
   },
 ];
