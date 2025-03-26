@@ -17,6 +17,7 @@ import {
   // vuejs,
   figma,
   docker,
+  coffee_windowpos,
   meta,
   starbucks,
   tesla,
@@ -29,7 +30,10 @@ import {
   Beltie,
   learnwithkru,
   barcodesnanner,
-  lsp
+  lsp,
+  sheep,
+  api,
+  windows
 } from "../assets";
 
 export const navLinks = [
@@ -63,6 +67,14 @@ const services = [
   {
     title: "Python Developer",
     icon: creator,
+  },
+  {
+    title: "API",
+    icon: api,
+  },
+  {
+    title: "Window pos",
+    icon: windows,
   },
 ];
 
@@ -279,7 +291,53 @@ const projects = [
       },
     ],
     image: lsp,
-    source_code_link: "https://github.com/",
+    source_code_link: "http://149.28.141.130:8118/",
+  },
+  {
+    name: "Farm Sheep",
+    description:
+      "Develop a web-based hotel management system for LSP Hotel to enhance guest experience and streamline operations. The system will include features for managing room reservations, guest check-ins/check-outs, and staff operations while providing real-time data on hotel activities.",
+    tags: [
+      {
+        name: "wordpress",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sheep,
+    source_code_link: "https://website-sheep.netlify.app/",
+  },
+  {
+    name: "Coffee System",
+    description:
+      "Develop a web-based hotel management system for LSP Hotel to enhance guest experience and streamline operations. The system will include features for managing room reservations, guest check-ins/check-outs, and staff operations while providing real-time data on hotel activities.",
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "pos",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Api",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "vercel",
+        color: "green-text-gradient",
+      },
+    ],
+    image: coffee_windowpos,
+    source_code_link: "https://coffee-system-appcoffee-system-app.vercel.app",
   },
 ];
 

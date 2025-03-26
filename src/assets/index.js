@@ -32,6 +32,10 @@ import Beltie from "./company/beltei_international_university_in_cambodia.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
+import sheep from "./sheep.png";
+import api from "./api.png";
+import windows from "./windows.svg";
+import coffee_windowpos from "./coffee_windowpos.png";
 import tripguide from "./tripguide.png";
 import learnwithkru from "./learnwithkru.png";
 import barcodesnanner from "./barcodesnanner.png";
@@ -39,6 +43,8 @@ import lsp from "./LSP_HOTEL.png";
 export {
   logo,
   lsp,
+  api,
+  windows,
   backend,
   creator,
   mobile,
@@ -55,9 +61,11 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  coffee_windowpos,
   // nextjs,
   // vuejs,
   redux,
+  sheep,
   Sabiacodedesign,
   tailwind,
   typescript,
