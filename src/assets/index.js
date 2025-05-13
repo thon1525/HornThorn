@@ -16,11 +16,12 @@ import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
+import nextjs from "./tech/nextjs.svg";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import nextjs from "./tech/nextjs.png";
+// import nextjs from "./tech/nextjs.png";
 import vuejs from "./tech/vuejs.png";
 
 import meta from "./company/meta.png";
@@ -66,8 +67,8 @@ export {
   nodejs,
   reactjs,
   coffee_windowpos,
-  // nextjs,
-  // vuejs,
+  nextjs,
+  vuejs,
   redux,
   sheep,
   Sabiacodedesign,

@@ -4,7 +4,10 @@ import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Stars
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{
+      v7_startTransition: true, // Opt into React.startTransition
+      v7_relativeSplatPath: true, // Opt into new splat path behavior
+    }}>
       <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
