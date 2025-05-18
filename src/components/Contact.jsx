@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const navigate = useNavigate();
-  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -46,6 +46,7 @@ const Contact = () => {
 
     setLoading(true);
     try {
+      console.log("this is url", apiUrl);
       const response = await axios.post(
         `${apiUrl}/api/messages/`,
         {
