@@ -33,6 +33,7 @@ const Contact = () => {
     if (!form.message.trim()) return "Message is required.";
     return null;
   };
+      console.log("this is url", apiUrl);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,7 +47,6 @@ const Contact = () => {
 
     setLoading(true);
     try {
-      console.log("this is url", apiUrl);
       const response = await axios.post(
         `${apiUrl}/api/messages/`,
         {
