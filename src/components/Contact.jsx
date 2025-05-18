@@ -33,7 +33,7 @@ const Contact = () => {
     if (!form.message.trim()) return "Message is required.";
     return null;
   };
-      console.log("this is thon url", apiUrl);
+      console.log("this is  url", apiUrl);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
