@@ -70,22 +70,22 @@ const services = [
     title: "Backend Developer",
     icon: backend,
   },
-  {
-    title: "Python Developer",
-    icon: creator,
-  },
-  {
-    title: "Javascript Developer",
-    icon: js,
-  },
-  {
-    title: "API Developer",
-    icon: api,
-  },
-  {
-    title: "Window Developer",
-    icon: windows,
-  },
+  // {
+  //   title: "Python Developer",
+  //   icon: creator,
+  // },
+  // {
+  //   title: "Javascript Developer",
+  //   icon: js,
+  // },
+  // {
+  //   title: "API Developer",
+  //   icon: api,
+  // },
+  // {
+  //   title: "Window Developer",
+  //   icon: windows,
+  // },
 ];
 
  const technologies = [
