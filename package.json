@@ -23,7 +23,8 @@
     "react-router-dom": "^6.8.1",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.171.0",
-    "three-mesh-bvh": "^0.8.3"
+    "three-mesh-bvh": "^0.8.3",
+    "zod": "^3.25.28"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
