@@ -20,7 +20,7 @@ import nextjs from "./tech/nextjs.svg";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import django from "./tech/django.svg";
-import laravel from "./tech/laravel.svg";
+import laravel from "./tech/icon_laravel.svg";
 import php from "./tech/php.svg";
 import python from "./tech/python.svg";
 import vuejs from "./tech/vuejs.png";
