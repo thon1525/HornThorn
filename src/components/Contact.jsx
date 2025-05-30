@@ -6,17 +6,31 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import * as yup from "yup";
+
+// Yup validation schema
+const contactSchema = yup.object().shape({
+  name: yup.string().trim().required("Name is required."),
+  email: yup
+    .string()
+    .trim()
+    .email("Email is not valid.")
+    .required("Email is required."),
+  message: yup.string().trim().required("Message is required."),
+});
 
 const Contact = () => {
   const navigate = useNavigate();
   const apiUrl = import.meta.env.VITE_API_URL;
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,65 +40,54 @@ const Contact = () => {
     }));
   };
 
-  const validateForm = () => {
-    if (!form.name.trim()) return "Name is required.";
-    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      return "Valid email is required.";
-    if (!form.message.trim()) return "Message is required.";
-    return null;
+  const validateForm = async () => {
+    try {
+      await contactSchema.validate(form, { abortEarly: false });
+      return {};
+    } catch (validationError) {
+      const fieldErrors = {};
+      validationError.inner.forEach((err) => {
+        fieldErrors[err.path] = err.message;
+      });
+      return fieldErrors;
+    }
   };
-      console.log("this is  url", apiUrl);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null);
+    setError({});
 
-    const validationError = validateForm();
-    if (validationError) {
-      setError(validationError);
+    const validationErrors = await validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setError(validationErrors);
       return;
     }
 
     setLoading(true);
     try {
-      const response = await axios.post(
-        `${apiUrl}/api/messages/`,
-        {
-          name: form.name,
-          email: form.email,
-          message: form.message,
+      const response = await axios.post(`${apiUrl}/api/messages/`, form, {
+        headers: {
+          "Content-Type": "application/json",
         },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      });
       console.log("Response:", response.data);
       setLoading(false);
       setForm({ name: "", email: "", message: "" });
       navigate("/thank", { state: { fromForm: true } });
-    } catch (error) {
+    } catch (err) {
       setLoading(false);
-      console.error("Error posting to API:", error);
-      if (error.response) {
-        setError(
-          `Server error: ${
-            error.response.data.message || "Unable to process your request."
-          }`
-        );
-      } else if (error.request) {
-        setError("Network error: Please check your internet connection.");
+      if (err.response) {
+        setError({ server: err.response.data.message || "Server error." });
+      } else if (err.request) {
+        setError({ server: "Network error. Please check your connection." });
       } else {
-        setError("An unexpected error occurred. Please try again.");
+        setError({ server: "An unexpected error occurred." });
       }
     }
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-[#0c0042] p-8 rounded-2xl"
@@ -92,12 +95,10 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        {error && <p className="text-red-500 mb-4">{error}</p>}
+        {error.server && <p className="text-red-500 mb-4">{error.server}</p>}
 
-        <form
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
+        <form onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
+          {/* Name Field */}
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -108,7 +109,12 @@ const Contact = () => {
               placeholder="What's your good name?"
               className="bg-[#1b153d] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {error.name && (
+              <span className="text-red-400 text-sm mt-1">{error.name}</span>
+            )}
           </label>
+
+          {/* Email Field */}
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email</span>
             <input
@@ -119,7 +125,12 @@ const Contact = () => {
               placeholder="What's your email address?"
               className="bg-[#1b153d] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {error.email && (
+              <span className="text-red-400 text-sm mt-1">{error.email}</span>
+            )}
           </label>
+
+          {/* Message Field */}
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
@@ -130,8 +141,14 @@ const Contact = () => {
               placeholder="What do you want to say?"
               className="bg-[#1b153d] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {error.message && (
+              <span className="text-red-400 text-sm mt-1">
+                {error.message}
+              </span>
+            )}
           </label>
 
+          {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}

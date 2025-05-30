@@ -8,7 +8,6 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
@@ -18,13 +17,6 @@ import {
   figma,
   docker,
   coffee_windowpos,
-  meta,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
   Sabiacodedesign,
   Beltie,
   learnwithkru,
@@ -34,7 +26,22 @@ import {
   sheep,
   frontEnd,
   api,
+  django,
+  laravel,
+  php,
   windows,
+  python,
+  Sharp,
+  dart,
+  java,
+  NET_Core_Logo,
+  mysql,
+  Postgresql_elephant,
+  nestjs,
+  wordpress,
+  bootstrap,
+  jquery,
+  asw
 } from "../assets";
 
 // export const navLinks = [
@@ -87,22 +94,48 @@ const services = [
   },
 ];
 
- const technologies = [
-  { name: "HTML 5", icon: html },
-  { name: "CSS 3", icon: css },
-  { name: "JavaScript", icon: javascript },
-  { name: "TypeScript", icon: typescript },
-  { name: "React JS", icon: reactjs },
-  { name: "Redux Toolkit", icon: redux },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "Node JS", icon: nodejs },
-  { name: "MongoDB", icon: mongodb },
-  { name: "Three JS", icon: threejs },
-  { name: "git", icon: git },
-  { name: "Figma", icon: figma },
-  { name: "Docker", icon: docker },
-  { name: "Next.js", icon: nextjs },
-  // { name: "Vue JS", icon: vuejs },
+const technologies = [
+  // Programming Languages
+  { category: "Languages", name: "JavaScript", icon: javascript },
+  { category: "Languages", name: "TypeScript", icon: typescript },
+  { category: "Languages", name: "Python", icon: python },
+  { category: "Languages", name: "Dart", icon: dart },
+  { category: "Languages", name: "Java", icon: java },
+  { category: "Languages", name: "PHP", icon: php },
+  { category: "Languages", name: "C#", icon: Sharp },
+
+  // Frontend Technologies
+  { category: "Frontend", name: "HTML5", icon: html },
+  { category: "Frontend", name: "CSS3", icon: css },
+  { category: "Frontend", name: "React.js", icon: reactjs },
+    { category: "Frontend", name: "Next.js", icon: nextjs },
+
+    { category: "Frontend", name: "Vue.js", icon: vuejs },
+      { category: "Frontend", name: "Jquery", icon: jquery },
+
+  { category: "Frontend", name: "Tailwind CSS", icon: tailwind },
+  {category: "Frontend", name: "Bootstrap",icon: bootstrap},
+
+  // Backend & Frameworks
+  { category: "Backend", name: "Node.js", icon: nodejs },
+  {category: "Backend", name:  "Nest.js",icon: nestjs},
+  { category: "Backend", name: "Laravel", icon: laravel },
+  {category: "Backend", name: "wordpress", icon: wordpress},
+    { category: "Backend", name: "ASP", icon:  NET_Core_Logo},
+  { category: "Backend", name: "Django", icon: django },
+
+
+  // Databases
+  { category: "Database", name: "MongoDB", icon: mongodb },
+    { category: "Database", name: "Mysql", icon: mysql },
+    {category: "Database", name: "PostgreSql", icon: Postgresql_elephant},
+
+
+  // Tools & Platforms
+  { category: "Tools", name: "Git", icon: git },
+  { category: "Tools", name: "Docker", icon: docker },
+  {category: "Tools",name: "Aws",icon : asw},
+  { category: "Tools", name: "Figma", icon: figma },
 ];
 
 const experiences = [
@@ -163,50 +196,24 @@ const experiences = [
     
     ],
   },
-  // {
-  //   title: "Web Developer",
-  //   company_name: "Shopify",
-  //   icon: shopify,
-  //   iconBg: "#383E56",
-  //   date: "Jan 2022 - Jan 2023",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
 ];
 
 const testimonials = [
   {
-    testimonial:
-      "To develop the next generation of Cambodian leaders in technology and innovation.",
-    name: "sabai code",
-    designation: "VISION",
-    company: "sabaicode",
-    image: "https://sabaicode.com/sabaicode.jpg",
+  testimonial:
+    "We create fast, high-quality websites tailored to your brand and business goals.",
+  name: "L.Sky Cambo",
+  designation: "VISION",
+  company: "L.SKY CAMBO CO.,LTD",
+  image: "https://lskycambo.com/wp-content/themes/lsky_page/images/Logo-Lsky.svg",
   },
   {
     testimonial:
-      "To empower every Cambodian child with powerful technology skills",
-    name: "sabai code",
+      "Thorn is a creative web developer who delivers high-quality designs and smart back-end solutions",
+    name: "BELTEI International University",
     designation: "MISSION",
-    company: "sabaicode",
-    image: "https://sabaicode.com/sabaicode.jpg",
+    company: "BELTEI GROUP",
+    image: "https://www.beltei.edu.kh/asset/img/university/campus/beltei_international_university_in_cambodia.png",
   },
   {
     testimonial:
@@ -346,7 +353,7 @@ const projects = [
       },
     ],
     image: coffee_windowpos,
-    source_code_link: "https://github.com/thon1525/coffee-system.git",
+    source_code_link: "https://coffee-system-appcoffee-system-app.vercel.app",
   },
 ];
 

@@ -5,9 +5,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      // Ensure compatibility for react-yarn
       'react-tilt': 'react-tilt/dist/index.js',
     },
+  },
+  optimizeDeps: {
+    include: ['three', '@react-three/fiber', '@react-three/drei'],  // <--- add this
   },
   build: {
     commonjsOptions: {
