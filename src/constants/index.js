@@ -205,7 +205,7 @@ const testimonials = [
   name: "L.Sky Cambo",
   designation: "VISION",
   company: "L.SKY CAMBO CO.,LTD",
-  image: "https://lskycambo.com/wp-content/themes/lsky_page/images/Logo-Lsky.svg",
+  image: "https://images.khmer24.co/25-03-05/web-developer-back-end--953261174116336426007635-b.jpg",
   },
   {
     testimonial:
