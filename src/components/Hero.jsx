@@ -24,20 +24,26 @@ const Hero = () => {
         </div>
       </div>
       {/* <ComputersCanvas /> */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-              <motion.a
+<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ duration: 0.4, ease: "easeInOut" }}
+    className="green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+  >
+    <a
       href="/thonhourn.pdf"
       download="thonhourn.pdf"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="w-[160px] h-[48px] bg-secondary text-white font-medium rounded-xl flex justify-center items-center shadow-md hover:bg-secondary/80 transition duration-300"
+      className="w-[180px] h-[50px] bg-[#151253] rounded-[20px] text-white font-semibold flex justify-center items-center
+                 shadow-[0_4px_20px_rgba(0,0,0,0.6)] backdrop-blur-md border border-white/10 transition duration-300 ease-in-out"
     >
       Download CV
-    </motion.a>
-      </div>
+    </a>
+  </motion.div>
+</div>
+
     </section>
   );
 };
